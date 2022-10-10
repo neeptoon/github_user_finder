@@ -2,6 +2,7 @@ import {Container} from 'components/Container';
 import {Header} from 'components/Header';
 
 import {Search} from './components/Search';
+import {UserCard} from './components/UserCard';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <Container>
             <Header/>
             <Search onSubmit={() => {}}/>
+            <UserCard/>
 
         </Container>
     );
