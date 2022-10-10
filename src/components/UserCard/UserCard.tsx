@@ -1,9 +1,17 @@
+import {UserStat} from '../UserStat';
+
+import {LocalGithubUser} from '../../types';
+
 import styles from './UserCard.module.scss';
 
-interface UserCardProps { }
+interface UserCardProps extends LocalGithubUser { }
 
-export const UserCard = ({ }: UserCardProps) => (
+export const UserCard = (props: UserCardProps) => (
     <div className={styles.userCard}>
-    UserCard Component
+        <UserStat
+            repos={props.repos}
+            followers={props.followers}
+            following={props.following}
+        />
     </div>
 );

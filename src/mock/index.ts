@@ -1,18 +1,18 @@
-import {GithubUser} from '../types';
+import {LocalGithubUser} from '../types';
 
-export const defaultUser: GithubUser =
+export const defaultUser: LocalGithubUser =
 {
     'login': 'neeptoon',
     'id': 44229124,
-    'avatar_url': 'https://avatars.githubusercontent.com/u/44229124?v=4',
+    'avatar': 'https://avatars.githubusercontent.com/u/44229124?v=4',
     'name': 'Евгений Шеханов',
     'blog': '',
     'company': null,
     'location': ' Nizhny Novgorod',
     'bio': 'Hi! I\'m an front-end-developer!!',
-    'twitter_username': null,
-    'public_repos': 32,
+    'twitter': null,
+    'repos': 32,
     'followers': 2,
     'following': 6,
-    'created_at': '2018-10-17T10:24:46Z',
+    'created': '2018-10-17T10:24:46Z',
 };

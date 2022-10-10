@@ -3,14 +3,15 @@ export type LocalGithubUser = {
     id: number,
     avatar: string,
     name: string,
-    company: string,
+    company: string | null,
     blog: string,
     location: string,
     bio: string,
-    repos: string,
+    repos: number,
     followers: number,
     following: number,
-    created: string
+    created: string,
+    twitter: string | null,
 }
 
 export type GithubUser = {
