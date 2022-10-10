@@ -1,16 +1,17 @@
-import {Container} from "components/Container";
-import {Header} from "components/Header";
-import {Search} from "./components/Search";
+import {Container} from 'components/Container';
+import {Header} from 'components/Header';
+
+import {Search} from './components/Search';
 
 
 function App() {
-  return (
-    <Container>
-        <Header/>
-        <Search onSubmit={() => {}}/>
+    return (
+        <Container>
+            <Header/>
+            <Search onSubmit={() => {}}/>
 
-    </Container>
-  );
+        </Container>
+    );
 }
 
 export default App;

@@ -1,4 +1,5 @@
-import {ThemeSwitcher} from "components/ThemeSwitcher";
+import {ThemeSwitcher} from 'components/ThemeSwitcher';
+
 import styles from './Header.module.scss';
 
 export const Header = () => (
