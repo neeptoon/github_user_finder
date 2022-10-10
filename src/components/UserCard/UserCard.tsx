@@ -4,6 +4,8 @@ import {LocalGithubUser} from '../../types';
 
 import {UserTitle} from '../UserTitle';
 
+import {UserInfo} from '../UserInfo';
+
 import styles from './UserCard.module.scss';
 
 interface UserCardProps extends LocalGithubUser { }
@@ -20,14 +22,19 @@ export const UserCard = (props: UserCardProps) => (
             created={props.created}
             login={props.login}
         />
-        <p className={`${styles.bio} ${props.bio ? '' : `${styles.empty}`}`}>
+        <p className={`${styles.bio}${props.bio ? '' : `${ styles.empty}`}`}>
             {props.bio || 'This profile has no bio'}
         </p>
-
         <UserStat
             repos={props.repos}
             followers={props.followers}
             following={props.following}
+        />
+        <UserInfo
+            blog={props.blog}
+            company={props.company}
+            twitter={props.twitter}
+            location={props.location}
         />
     </div>
 );
