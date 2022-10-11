@@ -1,0 +1,14 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 767px) {
+  .userInfo {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+  }
+}
+
+/*# sourceMappingURL=UserInfo.module.css.map */
