@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {ReactComponent as SearchIcon} from 'assets/icon-search.svg';
 
@@ -7,7 +7,7 @@ import {Button} from '../Button';
 import styles from './Search.module.scss';
 
 interface SearchProps {
-    hasError?: boolean,
+    hasError: boolean,
     onSubmit: (text: string) => void
 
 }
@@ -21,7 +21,7 @@ export const Search = ({hasError, onSubmit}: SearchProps) => {
         evt.preventDefault();
         const text = evt.currentTarget.userName.value;
 
-        if (text) {
+        if (text.trim()) {
             onSubmit(text);
             evt.currentTarget.reset();
         }
@@ -40,7 +40,7 @@ export const Search = ({hasError, onSubmit}: SearchProps) => {
                     type="text"
                     placeholder="Search Github username...."
                 />
-                {hasError && <p className={styles.error}>something going wrong</p>}
+                {hasError && <p className={styles.error}>there is no user</p>}
                 <Button>Search!!</Button>
             </div>
         </form>
